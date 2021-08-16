@@ -43,7 +43,6 @@ struct Plant: Identifiable, Hashable, Codable {
         try container.encode(water, forKey: .water)
         try container.encode(photoChosen, forKey: .photoChosen)
         try container.encode(choosingPhoto, forKey: .choosingPhoto)
-        
         let plantData = plantPhoto.jpegData(compressionQuality: 0.1)
         try container.encode(plantData, forKey: .plantPhoto)
     }
